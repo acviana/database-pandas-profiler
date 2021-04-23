@@ -9,6 +9,7 @@ python = "^3.8"
 pandas-profiling = "^2.11.0"
 streamlit = "^0.80.0"
 SQLAlchemy = "^1.4.11"
+watchdog = "^2.0.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
