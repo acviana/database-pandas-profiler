@@ -29,7 +29,7 @@ def main():
     df = pd.read_sql(
         session.query(Base.metadata.tables[table_name]).statement, session.bind
     )
-    profile = ProfileReport(df, title="Pandas Profiling Report")
+    profile = ProfileReport(df, title=f"{table_name} Profiling Report")
     st_profile_report(profile)
 
 

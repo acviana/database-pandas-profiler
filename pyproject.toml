@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "data_explorer"
+name = "pandas_database_profiler"
 version = "0.1.0"
 description = ""
 authors = ["Alex Viana <->"]
