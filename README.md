@@ -8,15 +8,18 @@ The streamlit-pandas-profiling project is itself an extension of the [pandas-pro
 
 ### Setup Instructions
 
-*Installation*
+**Installation**
+
 This project uses [Poetry](https://python-poetry.org/) for dependency management.
 Once you have installed Poetry you can setup the project by running `poetry install` in the project directory.
 A `requirements.txt` file is included f you prefer to set up your own environment with pip or another tool.
 
-*Database Drivers*
+**Database Drivers**
+
 You will have to manually install the Python database driver for your database type if it is not already present in your environment, e.g. `poerty add psycopg2` or `pip install psycopg2`.
 
-*Environment Variables*
+**Environment Variables**
+
 Following the practices recommended by the [12-factor app](https://12factor.net/config) this project store the database configuration string in an environment variable called `DATABASE-PANDAS-EXPLORER-DB-CONNECTION`.
 This is a string that should match the SQLAlchemy [connection string format](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls).
 
