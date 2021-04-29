@@ -11,7 +11,7 @@ from streamlit_pandas_profiling import st_profile_report
 
 def main():
     # Grab the connection string
-    connection_string = os.environ["CONNECTION_STRING"]
+    connection_string = os.environ["DATABASE-PANDAS-EXPLORER-DB-CONNECTION"]
     st.text(f"Connected to: {connection_string}")
 
     # Build a declarative base object and reflect the table metadata
