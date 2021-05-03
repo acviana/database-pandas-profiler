@@ -11,13 +11,15 @@ from streamlit_pandas_profiling import st_profile_report
 
 def main():
     # Grab the connection string
-    connection_string = os.environ["DATABASE-PANDAS-EXPLORER-DB-CONNECTION"]
-    st.text(f"Connected to: {connection_string}")
+    connection_string = os.environ["PANDAS_DATABASE_EXPLORER_DB_CONNECTION"]
 
     # Build a declarative base object and reflect the table metadata
     # so we don't have to build the ORM by hand
     Base = automap_base()
     engine = create_engine(connection_string)
+
+    # Use the repr to hide the password in the database URI
+    st.text(f"Connected to: {repr(engine.url)}")
     Base.prepare(engine, reflect=True)
 
     table_name = st.selectbox(
